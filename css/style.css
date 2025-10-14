@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'NunitoSans';
+    src: url("../assests/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: "Americana Font";
+    src: url("../assests/Americana Font Regular/Americana Font Regular.otf");
+}
+
+/* height width root */
+:root {
+    --pagewidth-max-width: 1600px;
+    --max-width: 100%;
+    --max-height: 100%;
+}
+
+/* color root */
+:root {
+    --brand-line-color: #26A3DB;
+    --brand-line-second-color: #E9F6FB;
+    --white-color: #FFFFFF;
+    --black-color: #0000;
+    --heading-color: #000309;
+    --compare-color: #8A9099;
+    --border-color: #D2D5D9;
+}
+
+/* font style root */
+:root {
+    --paragraph-font: "NunitoSans", sans-serif;
+    --heading-font-size: 36px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --heading-font: "Americana Font";
+}
+
+/* padding root */
+:root {
+    --line-height: 26px;
+    --btn-padding: 13px 36px;
+    --btn-font-weight: 500;
+    --font-style: bold;
+    --border-raduis: 5px;
+    --padding: 15px 130px;
+}
+
+/* overall css */
+.page-width {
+    max-width: var(--pagewidth-max-width);
+    margin: auto;
+}
+
+.grid-cls {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.padding {
+    padding: var(--padding)
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.paragraph-font {
+    font-family: var(--paragraph-font);
+}
+
+.list-style {
+    list-style: none;
+}
+
+.heading-size {
+    font-size: var(--heading-font-size);
+}
+
+.para-size {
+    font-size: var(--normal-font-size);
+}
+
+.small-size {
+    font-size: var(--small-font-size);
+}
+
+.body-font {
+    font-family: var(--paragraph-font);
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+    font-weight: 100;
+}
+
+/* buttons */
+.primary-btn {
+    color: var(--white-color);
+    background: var(--brand-line-color);
+    padding: var(--btn-padding);
+    font-family: var(--paragraph-font);
+    border-radius: 5px;
+    line-height: 100%;
+}
+
+/* grid-css */
+.grid-6-col-desktop .grid-item {
+    display: grid;
+    width: calc(17% - 0px);
+    justify-content: center;
+    max-width: calc(17% - 0px);
+}
+.grid-5-col-desktop .grid-item {
+    display: grid;
+    width: calc(20% - 20px);
+    max-width: calc(20% - 20px);
+}
+
+.grid-4-col-desktop .grid-item {
+    display: grid;
+    width: calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.grid-3-col-desktop .grid-item {
+    display: grid;
+    width: calc(33.3% - 20px);
+    max-width: calc(33.3% - 20px);
+}
+
+.grid-2-col-desktop .grid-item {
+    display: grid;
+    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+/* announcement-bar css */
+.announcement-bar {
+    background-color: var(--brand-line-color);
+    color: var(--white-color);
+    padding: 10px 0px;
+}
+
+/* header */
+.header-wrapper {
+    position: absolute;
+    z-index: 13;
+    width: 100%;
+}
+
+.header-logo img {
+    max-width: 103.01px;
+    max-height: 50px;
+}
+
+.header--inner a {
+    display: inline-block;
+    color: var(--white-color);
+}
+
+.header-content {
+    width: var(--max-width);
+}
+
+.header--inner {
+    grid-template-columns: auto auto 35%;
+    width: 100%;
+    gap: 15px;
+}
+
+.header-links-ul {
+    gap: 20px;
+}
+
+ul.header-icons--inner {
+    gap: 30px;
+    justify-content: end;
+}
+
+/* banner  */
+.banner-text {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 0px;
+}
+.banner--inner-text {
+    flex-direction: column;
+    gap: 25px;
+    align-items: baseline;
+    color: var(--white-color);
+}
+
+/* icons with text */
+.icons-with-text-wrapper{
+    background-color: var(--brand-line-second-color);
+}
+.icons-text h6 a {
+    font-size: 18px;
+    color: var(--heading-color);
+}
+.inner-text {
+    flex-direction: column;
+    gap: 11px;
+}
+ul.icons-wth-txt--inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

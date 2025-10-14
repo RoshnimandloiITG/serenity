@@ -12,36 +12,37 @@
 
     <!-- Demo styles -->
     <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
+     
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-        .swiper {
-            width: 100%;
-            height: 100%;
-            max-height: 600px;
-        }
+.swiper {
+    width: 100%;
+    /* height: 100%; */
+    aspect-ratio: 22/9;
+}
 
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     </style>
 </head>
 
@@ -174,10 +175,11 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script src="./js/script.js"></script>
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script src="./js/script.js"></script>
 
     <!-- main -->
     <main>

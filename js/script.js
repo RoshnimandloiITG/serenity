@@ -26,7 +26,7 @@ setTimeout(() => {
       document.body.style.overflow = "hidden";
     }
   }
-}, 100);
+}, 10);
 
 
 SubmitBtn.addEventListener('click', (event) => {

@@ -140,6 +140,7 @@ li {
     border: 1px solid var(--white-color);
     border-radius: 5px;
     font-family: var(--paragraph-font);
+    cursor: pointer;
 }
 
 .underline-btn {
@@ -189,6 +190,165 @@ li {
 }
 
 
+/* ---------------------------------------------age pop up ------------------------------------------------------ */
+.pop-up-logo img {
+    max-width: 103px;
+    max-height: 60px;
+}
+
+.pop-up-content {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 16;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 47%;
+    height: 44%; */
+    border-radius: 5px;
+}
+
+a {
+    display: inline-block;
+}
+
+.pop-up-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    width: 100%;
+    box-shadow: 2px 1px 16px -4px #000000;
+    padding: 40px 100px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    width: 100%;
+    height: 41%;
+}
+
+input#number-input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-raduis);
+    outline: none;
+}
+
+button.Submit-btn {
+    padding: var(--btn-padding);
+    color: var(--white-color);
+    background: var(--brand-line-color);
+    border: 1px solid var(--brand-line-color);
+    border-radius: var(--border-raduis);
+    cursor: pointer;
+}
+
+.pop-up {
+    display: none;
+    position: fixed;
+    z-index: 16;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+}
+
+form#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* welcome popup */
+.welcome-popup-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+    box-shadow: 2px 3px 9px 0px black;
+    position: relative;
+    border-radius: var(--border-raduis);
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-popup-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.welcome-popup-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 60px;
+    box-shadow: 2px 3px 9px 0px black;
+    position: relative;
+    border-radius: var(--border-raduis);
+    width: 100%;
+    height: 100%;
+}
+
+button.cross-btn {
+    background: none;
+    border: none;
+}
+
+.cross {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+}
+
+.welcome-popup {
+    display: none;
+    position: fixed;
+    z-index: 16;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 50%;
+    height: 57%;
+}
+
+/* ------------------------------------------------------eligible pop up ------------------------------------------*/
+.eligible-popup {
+    display: none;
+    position: fixed;
+    z-index: 16;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+}
+
+.eligilbe-popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.eligible-popup-inner {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+}
 /* ---------------------------------------------announcement-bar css ----------------------------------------------*/
 .announcement-bar {
     background-color: var(--brand-line-color);
@@ -305,7 +465,7 @@ body {
 .icons-text h6 a {
     font-size: 18px;
     color: var(--heading-color);
-    font-weight:400;
+    font-weight: 400;
 }
 
 .inner-text {
@@ -322,11 +482,13 @@ body {
 ul.icons-wth-txt--inner {
     row-gap: 20px;
 }
+
 .category-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* ----------------------------------------------------category section -----------------------------------*/
 .category-wrapper {
     padding: 40px 0px;
@@ -455,6 +617,10 @@ button.tertiary-btn {
 
 .card-product-text a {
     color: var(--heading-color);
+}
+
+.card-product-heading-inner span {
+    cursor: pointer;
 }
 
 /*----------------------------------------------- override-imh-text----------------------------------------- */
@@ -630,6 +796,7 @@ section.customer-review-wrap {
 .customer-arrow {
     display: flex;
     gap: 20px;
+    cursor: pointer;
 }
 
 .customer-review-text--inner h3 {
@@ -708,6 +875,7 @@ span.date {
 
 ul.blog-list {
     gap: 20px;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------rich text-------------------------------------------------- */
@@ -781,7 +949,7 @@ ul.blog-list {
 .more-info--text h6 a {
     font-size: 18px;
     color: var(--heading-color);
-      font-weight:400;
+    font-weight: 400;
 }
 
 .more-info--inner-text {
@@ -1190,7 +1358,7 @@ ul.payment-method {
     }
 
     .banner-text {
-        top: 35%;
+        top: 20%;
     }
 
     :root {
@@ -1271,5 +1439,11 @@ ul.payment-method {
 
     .banner--inner-text {
         gap: 3px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .banner-text {
+        top: 28%;
     }
 }

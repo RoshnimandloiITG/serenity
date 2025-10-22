@@ -225,6 +225,7 @@ a {
     background-color: var(--white-color);
     width: 100%;
     height: 41%;
+    background: linear-gradient(45deg, #1f82a9, #f0fdff, #6565c1);
 }
 
 input#number-input {
@@ -298,6 +299,7 @@ form#form {
     border-radius: var(--border-raduis);
     width: 100%;
     height: 100%;
+    background: linear-gradient(45deg, #1f82a9, #f0fdff, #6565c1);
 }
 
 button.cross-btn {
@@ -323,34 +325,8 @@ button.cross-btn {
     height: 57%;
 }
 
-/* ------------------------------------------------------eligible pop up ------------------------------------------*/
-.eligible-popup {
-    display: none;
-    position: fixed;
-    z-index: 16;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 5px;
-}
-
-.eligilbe-popup-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-}
-
-.eligible-popup-inner {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white-color);
-}
-
-/* ----------------------------------------------------invalid age ----------------------------------------------- */
+/* ------------------------------------------------------eligible pop up  and invalid age -----------------------------------*/
+.eligible-popup,
 .not-valid-popup {
     display: none;
     position: fixed;
@@ -358,10 +334,12 @@ button.cross-btn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
 }
 
+.eligilbe-popup-content,
 .not-valid-popup-content {
     display: flex;
     align-items: center;
@@ -371,11 +349,17 @@ button.cross-btn {
     padding: 20px;
 }
 
+.eligible-popup-inner,
 .not-valid-popup-inner {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white-color);
+
+    position: fixed;
+    z-index: 16;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   background: linear-gradient(45deg, #1f82a9, #f0fdff, #6565c1);
 }
+
 /* ---------------------------------------------announcement-bar css ----------------------------------------------*/
 .announcement-bar {
     background-color: var(--brand-line-color);
@@ -1369,12 +1353,23 @@ ul.payment-method {
         line-height: 0px;
     }
 
+    .pop-up-inner {
+
+        padding: 16px 13px;
+
+    }
+
 }
 
 @media only screen and (max-width:760px) {
     .banner-text {
         top: 27%;
 
+    }
+
+    .welcome-popup {
+        width: 88%;
+        height: 23%;
     }
 }
 
@@ -1466,6 +1461,20 @@ ul.payment-method {
 
     .banner--inner-text {
         gap: 3px;
+    }
+
+    .pop-up-content {
+        width: 77%;
+    }
+
+    .eligible-popup-inner,
+    .not-valid-popup-inner {
+        width: 77%;
+    }
+
+    .welcome-popup-inner {
+        padding: 8px;
+        text-align: center;
     }
 }
 

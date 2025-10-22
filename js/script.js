@@ -13,7 +13,6 @@ setTimeout(() => {
     popUp.style.display = "block";
     document.body.style.overflow = "hidden";
   }
-
   // else if (userAge >= 18 && userAge < 100) {
   //   welcomePopUp.style.display = "none";
   //   popUp.style.display = "none";
@@ -29,7 +28,7 @@ setTimeout(() => {
 }, 10);
 
 
-SubmitBtn.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   let age = input.value;
 
@@ -55,7 +54,7 @@ SubmitBtn.addEventListener('click', (event) => {
   else if (age <= 0 || age >= 100) {
     notValidPopUp.style.display = "block";
     popUp.style.display = "none";
-      setTimeout(() => {
+    setTimeout(() => {
       notValidPopUp.style.display = "none";
       popUp.style.display = "block";
     }, 2000);

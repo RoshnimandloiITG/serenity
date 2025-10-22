@@ -6,6 +6,7 @@ const welcomePopUp = document.getElementsByClassName('welcome-popup')[0];
 const crossBtn = document.getElementsByClassName('cross-btn')[0];
 const eligiblePopUp = document.getElementsByClassName("eligible-popup")[0];
 const notValidPopUp = document.getElementsByClassName("not-valid-popup")[0];
+
 setTimeout(() => {
   let userAge = JSON.parse(localStorage.getItem("user"));
 
